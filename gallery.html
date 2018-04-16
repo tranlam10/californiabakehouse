@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .rows > .col {
+    padding: 0 8px;
+  }
+
+  .rows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    width: 25%;
+    margin-top: 20px;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .cursor {
+    cursor: pointer
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  img {
+    margin-bottom: -4px;
+  }
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  }
+</style>
+
+<body>
+  <div style="background-color: #FFFFE0; padding-bottom: 40px;">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/"> <img src="/images/cbh_logo.png" class="d-inline-block align-top" alt="Logo"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/about">About</a>
+            <a class="nav-item nav-link" href="/catering">Catering</a>
+            <a class="nav-item nav-link" href="/promotions">Promotions</a>
+            <a class="nav-item nav-link" href="">Gallery</a>
+            <a class="nav-item nav-link" href="/contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+  </div>
+
+  <div class="rows" style="background-color: #FFFFE0; padding-bottom: 20px;">
+    <div class="col">
+      <img src="/images/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/pic9.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake1.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake2.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake3.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake4.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake5.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+    </div>
+    <div class="col">
+      <img src="/images/cake6.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <img src="/images/pic4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/pic5.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/pic6.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <img src="/images/pic7.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/pic8.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/pic9.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake3.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake5.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="/images/cake6.jpg" style="width:100%">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #FFFFE0;">
+    <p class="follow">Follow Us</p>
+    <a href="https://www.yelp.com/biz/california-bakehouse-milpitas"><img class="social-media" id="first-icon" src="/images/yelp.png" alt="Yelp"></a>
+    <a href="https://www.facebook.com/CaliforniaBakehouse/"><img class="social-media" src="/images/facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/californiabakehouse/?hl=en"><img class="social-media" src="/images/instagram.png" alt="Instagram"></a>
+  </div>
+
+<script>
+  function openModal() {
+    document.getElementById('myModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+</body>
+</html>

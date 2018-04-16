@@ -1,0 +1,208 @@
+.background {
+    background-image: url('/images/pic.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 500px;
+}
+
+.logo {
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  position: absolute; 
+  top: 300px; 
+  left: 0; 
+  width: 100%;
+  font-family: 'Circularpro book', sans-serif;
+  color: black;
+  font-size: 70px;
+  line-height: 15vmin;
+  font-weight: 500;
+  text-align: left;
+}
+
+.navbar {
+  font: 'Source Sans Pro', sans-serif;
+  font-size: 100px !important;
+}
+
+.nav-item {
+  margin-left: 27x;
+  margin-right: 27px;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar-brand {
+  margin-left: 5%;
+  width: 400px; 
+  height: 125px;
+}
+
+.boxed {
+  background: #FFFFE0;
+}
+
+.horizontal-line {
+ width: 100%;
+ height: 80px;
+ background: #5a2d0c linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) repeat scroll 0 0 / 40px 40px
+}
+
+.paragraph {
+  font: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.slider-box {
+  margin-top: 20px;
+  width: 800px;
+  height: 500px;
+  display: block;
+  margin-left: 30%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  opacity:1 !important;
+  color:red !important;
+}
+
+.slides {
+  margin-left: 18%;
+  width: 700px;
+  height: 400px;
+}
+
+.slider-box img.active {
+  display: inline-block;
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#prev {
+  font-size: 5em;
+}
+
+#next {
+  font-size: 5em;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.buttons {
+  height: 70px;
+  width: 70px;
+  margin-left: 120px;
+
+}
+
+.toggle-menu {
+  position: fixed;
+  padding: 20px 20px 20px 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.fa-times {
+  padding: 20px 20px;
+  right: 5px;
+  top: 5px;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+}
+
+.jumbotron {
+  background-image:url('http://goo.gl/04j7Nn');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+hr { 
+    display: block;
+    color: black;
+    border-width: 100px;
+}
+
+h3 {
+  font: "Raleway", sans-serif;
+  color: #2b2b2b;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.description {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #2b2b2b;
+}
+
+.contact-description {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+.contact {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  color: #2b2b2b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.follow {
+  margin-left: 27x;
+  margin-right: 27px;
+  font-size: 34px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+img.social-media {
+  padding-bottom: 5px;
+}
+
+#first-icon {
+  margin-left: 42.75%;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
